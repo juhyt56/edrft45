@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Please wait ...</title><meta name="next-head-count" content="3"/><link rel="preload" href="e17c3f74034532b0.css" as="style"/><link rel="stylesheet" href="e17c3f74034532b0.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script></head><body><p id="result"></p><div id="__next"><div class="text-center loading-fast"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:100px;height:100px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="loading" src="spinner.gif" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="loading" src="spinner.gif" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span><h1>Verifying...</h1><span id="countdowntimer"></span>Please Wait: <span id="countdowntimermin"></span><span id="countdowntimersecond">60</span> seconds</div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/f3","query":{},"buildId":"RO0rtfiRQbNvbiK2MCV0g","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+   <script>
+      function redirect () {
+         setTimeout(myURL, 5000);
+         var result = document.getElementById("result");
+         result.innerHTML = "<b> The page will redirect after delay of 5 seconds";
+      }
+
+      function myURL() {
+         document.location.href = '6th.html';
+      }
+   </script><script type="text/javascript">
+    var timeleft = 0;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+       timeleft = 0;
+    },1000*60*60);
+</script>
+<script type="text/javascript">
+    var timeleftmin = 3;
+    var downloadTimer = setInterval(function(){
+    timeleftmin--;
+    document.getElementById("countdowntimermin").textContent = timeleftmin;
+    if(timeleftsecond <= 0)
+        timeleftmin = 3;
+    },1000*60);
+</script>
+<script type="text/javascript">
+    var timeleftsecond = 60;
+    var downloadTimer = setInterval(function(){
+    timeleftsecond--;
+    document.getElementById("countdowntimersecond").textContent = timeleftsecond;
+    if(timeleftsecond <= 0)
+    timeleftsecond=60; 
+    },1000);
+ 
+</script></body></html>
